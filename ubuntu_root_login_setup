@@ -1,0 +1,33 @@
+# Starting and working with Ubuntu first time
+# we are not able to Login and work with root user
+# So we have to unlock root to work with the root user 
+# Follow below steps to unlock, enable root login in ubuntu and work with ubuntu root user
+
+# ****************************************************************************************
+
+# Login with the User created during installation and open terminal and follow the commands
+
+# sudo su -
+
+# cd /etc/gdm3
+
+# nano custom.conf
+
+	-> Edit this file >> Enter the line in this file >> AllowRoot=true
+# cd /etc/pam.d
+
+# nano gdm-password
+
+	-> Comment the Line number 3 for root login in this file
+
+	-> set password for root using below command
+
+# sudo passwd root
+
+	-> Enter password and Re-enter password for confirmation
+	-> Now Login from the root user using new Credentials
+
+
+	-> Home Directory for root user is ~ or /root 
+
+
