@@ -1,6 +1,7 @@
-For creation of partition in centos using fdisk
--------------------------------------------------
-1. 
+For creation of partition in Linux using fdisk tool 
+----------------------------------------------------
+
+1. Creating partition from an additional attached /dev/sdb
  
 	#fdisk /dev/sdb
 
@@ -39,9 +40,7 @@ For creation of partition in centos using fdisk
 5. Save the partition'
 
 		Press w
-
-
-	Calling ioctl() to re-read partition table
+			>> Calling ioctl() to re-read partition table
 
 6. Partprobe command informs OS kernel to re read the partitions in hard drive
 	Then our newly created partitions will be active.
@@ -49,6 +48,6 @@ For creation of partition in centos using fdisk
 		synatx:
 			partprobe /dev/sdb
 
-7. Reboot
+7. init 6 or Reboot
 
   
