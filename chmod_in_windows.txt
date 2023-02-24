@@ -1,0 +1,7 @@
+Take Powershell in Windows directory where the key is located
+--------------------------------------------------------------
+Perform below commands (lab_1_key.pem) is a sample key
+----------------------
+icacls.exe .\lab_1_key.pem /reset
+icacls.exe .\lab_1_key.pem /grant:r "$($env:username):(r)"
+icacls.exe .\lab_1_key.pem /inheritance:r
