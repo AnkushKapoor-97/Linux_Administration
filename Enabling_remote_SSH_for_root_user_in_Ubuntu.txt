@@ -1,0 +1,24 @@
+Enabling remote SSH for root user in Ubuntu machine
+---------------------------------------------------
+
+$ sudo nano /etc/ssh/sshd_config
+
+>> Inside this file make changes  
+
+-------------------------------------- Uncomment 
+FROM:
+#PermitRootLogin prohibit-password
+TO:
+PermitRootLogin yes 
+--------------------------------------
+
+One-liner for above step >>
+
+$ sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+$ sudo systemctl restart ssh
+
+
+Now try taking ssh from remote machine
+
+>> ssh root@<host-ip>
